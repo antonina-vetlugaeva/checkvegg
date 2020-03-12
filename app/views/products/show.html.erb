@@ -1,38 +1,34 @@
 <%= content_for :header do %>
-  <menu class="header">
-    <span><%= @product.name %></span>
-  </menu>
 <% end %>
 
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @product.type.name %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @product.category.name %>
-</p>
-
-<p>
-  <strong>Name:</strong>
+  <strong>Имя:</strong>
   <%= @product.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @product.description %>
+  <strong>Тип:</strong>
+  <%= @product.type.name %>
 </p>
 
-<h2>Состав</h2>
 <p>
   <% @product.ingridients.each do |ingridient| %>
     <% product_items = @product.product_items.where(ingridient_id: ingridient.id) %>
 
     <%= count_products_by_ingridient(ingridient, @product) %>
   <% end %>
+</p>
+
+<p>
+  <strong>Категория:</strong>
+  <%= @product.category.name %>
+</p>
+
+<p>
+  <strong>Состав:</strong>
+  <%= @product.description %>
 </p>
 
 <%= link_to 'About', categories_path, class: "A_Button" %>

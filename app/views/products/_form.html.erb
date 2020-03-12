@@ -12,15 +12,21 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
     <%= form.label :category_id %>
     <%= form.select :category_id, Category.all.collect { |c| [c.name, c.id] } %>
   </div>
 
-
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.label :type_id %>
+    <%= form.select :type_id, Type.all.collect { |t| [t.name, t.id] } %>
   </div>
+
+  <%= form.collection_check_boxes :ingridient_ids, Ingridient.all, :id, :name %>
 
   <div class="field">
     <%= form.label :description %>
