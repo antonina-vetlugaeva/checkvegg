@@ -1,0 +1,21 @@
+<%= content_for :header do %>
+  <menu class="header">
+    <span><%= @category.name %></span>
+  </menu>
+<% end %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @category.name %>
+</p>
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>
+
+<hr>
+<%= link_to 'New Product', new_category_product_path(@category) %>
+<hr>
+
+<%= render @category.products %>

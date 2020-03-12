@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Checkvegg</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <menu class="O_Menubar">
+      <%= link_to 'Каталог', categories_path %>
+      <%= link_to 'Ингридиенты', ingridients_path %>
+      <%= link_to 'О нас', about_page_path %>
+    </menu>
+
+    <menu class="header">
+      <%= yield :header %>
+      <hr>
+    </menu>
+    <%= yield %>
+  </body>
+</html>

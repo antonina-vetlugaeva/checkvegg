@@ -1,0 +1,10 @@
+h1 {
+  color: green;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  background-image: image_path('image.jpg');
+  background-size: cover;
+}

@@ -1,0 +1,14 @@
+.O_Menubar {
+  background: white;
+  box-sizing: border-box;
+  padding: 10px;
+  text-decoration: none;
+
+  a {
+    color: black;
+
+    &:hover {
+      color: #02B1B3;
+    }
+  }
+}

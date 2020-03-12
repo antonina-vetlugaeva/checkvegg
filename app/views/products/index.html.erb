@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+    <% id = product.category_id %>
+    <% category = Category.find_by id: id %>
+
+
+    <% id = product.type_id %>
+    <% type = Type.find_by id: id %>
+
+      <tr>
+        <td><%= product.category.name %></td>
+        <td><%= product.name %></td>
+        <td><%= product.description %></td>
+        <td><%#= product.type.name %></td>
+        <td><%= link_to 'Show', category_product_path(product.category, product) %></td>
+        <td><%= link_to 'Edit', edit_category_product_path(product.category, product) %></td>
+        <td><%= link_to 'Destroy', category_product_path(product.category, product), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product', new_product_path %>
