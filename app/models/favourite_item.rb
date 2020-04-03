@@ -1,4 +1,4 @@
 class FavouriteItem < ApplicationRecord
-  belongs_to :favourite
   belongs_to :user
+  belongs_to :product
 end
