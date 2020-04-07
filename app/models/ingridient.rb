@@ -1,5 +1,6 @@
 class Ingridient < ApplicationRecord
-  has_many :products, through: :ingridients_products;
+  has_and_belongs_to_many :products
+  has_many :product_items
 
   validates :name, uniqueness: true
 end

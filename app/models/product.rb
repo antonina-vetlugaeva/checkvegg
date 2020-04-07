@@ -1,11 +1,10 @@
 class Product < ApplicationRecord
   belongs_to :category
   belongs_to :type
+  has_many :product_items
+  has_many :favourite_items
 
-  has_many :favorite_items
-
-  has_many :ingridients_products
-  has_many :ingridients, through: :ingridients_products
+  has_and_belongs_to_many :ingridients
 
   validates :name, uniqueness: true
 end

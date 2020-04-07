@@ -9,7 +9,9 @@
 </p>
 
 <% if controller_name == 'categories' %>
-  <%= link_to 'Edit', edit_category_product_path(product.category) %>
+  <%= link_to 'Показать', category_product_path(product.category) %>
+  <%= link_to 'Редактировать продукт', edit_category_product_path(product.category) %>
 <% else %>
-  <%= link_to 'Edit', edit_product_path(product) %>
+  <%= link_to 'Показать', product_path(product) %>
+  <%= link_to 'Редактировать продукт', edit_product_path(product) %>
 <% end %>

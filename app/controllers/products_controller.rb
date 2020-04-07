@@ -10,7 +10,6 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    @favourite = User.first.favourites.last
   end
 
   # GET /products/new
