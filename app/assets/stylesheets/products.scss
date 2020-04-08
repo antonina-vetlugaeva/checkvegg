@@ -1,8 +1,8 @@
 .catalog {
   display: flex;
   flex-direction: column;
-  width: 299px;
-  margin-right: 140px;
+  width: 350px;
+  margin-right: 125px;
 
 
   .category-name {
@@ -17,6 +17,7 @@
 }
 
 .product-list {
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

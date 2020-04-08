@@ -5,12 +5,14 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   def index
     @categories = Category.all
+    @products = Product.all
   end
 
   # GET /categories/1
   # GET /categories/1.json
   def show
     @category = Category.find(params[:id])
+    @categories = Category.all
   end
   #по ид, который приходит в параметрах, находим категорию и грузим ее
 
