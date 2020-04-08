@@ -1,0 +1,41 @@
+body {
+  width: 84vw;
+  overflow-x: hidden;
+  margin: 0 150px;
+
+  * {
+    font-family: 'Rubik', sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+    color: #1A1919;
+
+    &:hover {
+      color: #02B1B3;
+    }
+
+
+
+
+  }
+
+  h1 {
+    color: #1A1919;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 130%;
+  }
+
+  .catalog {
+    margin-top: 35px;
+    margin-left: 14px;
+    display: flex;
+    flex-direction: column;
+
+    .category-name {
+      font-size: 20px;
+      margin-bottom: 23px;
+    }
+  }
+}

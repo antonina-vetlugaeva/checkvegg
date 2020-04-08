@@ -1,14 +1,18 @@
 .O_Menubar {
   background: white;
   box-sizing: border-box;
-  padding: 10px;
-  text-decoration: none;
+  font-family: 'Rubik';
+  font-weight: bold;
+  padding: 35px 0 105px;
 
   a {
-    color: black;
+    color: #02B1B3;
+    padding-right: 28px;
+    font-size: 16px;
+
 
     &:hover {
-      color: #02B1B3;
+      text-decoration: underline;
     }
   }
 }
