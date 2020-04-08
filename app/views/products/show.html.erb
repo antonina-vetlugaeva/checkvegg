@@ -3,37 +3,34 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Имя:</strong>
-  <%= @product.name %>
-</p>
+<section class="product-page">
+  <div class="about-product">
+    <h1>
+      <%= @product.name %>
+    </h1>
 
-<p>
-  <strong>Тип:</strong>
-  <%= @product.type.name %>
-</p>
+    <p>
+      <%= @product.type.name %>
+    </p>
 
-<p>
-  <% @product.ingridients.each do |ingridient| %>
-    <% product_items = @product.product_items.where(ingridient_id: ingridient.id) %>
+    <p>
+      <% @product.ingridients.each do |ingridient| %>
+        <% product_items = @product.product_items.where(ingridient_id: ingridient.id) %>
 
-    <%= count_products_by_ingridient(ingridient, @product) %>
-  <% end %>
-</p>
+        <%= count_products_by_ingridient(ingridient, @product) %>
+      <% end %>
+    </p>
 
-<p>
-  <strong>Категория:</strong>
-  <%= @product.category.name %>
-</p>
+    <p>
+      <strong>Состав:</strong>
+      <%= @product.description %>
+    </p>
 
-<p>
-  <strong>Состав:</strong>
-  <%= @product.description %>
-</p>
+    <%#= link_to 'About', categories_path, class: "A_Button" %>
 
-<%#= link_to 'About', categories_path, class: "A_Button" %>
+    <%= link_to 'Edit', edit_category_product_path(@product.category, @product) %>
+    <%= link_to 'Back', products_path %>
+  </div>
 
-<%= link_to 'Edit', edit_category_product_path(@product.category, @product) %>
-<%= link_to 'Back', products_path %>
-
-<hr>
+  <div class="product-image"><%= image_tag @product.image.url %></div>
+</section>
