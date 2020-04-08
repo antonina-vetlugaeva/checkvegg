@@ -28,38 +28,9 @@ body {
     line-height: 130%;
   }
 
-  .catalog {
-    margin-top: 35px;
-    margin-left: 14px;
-    display: flex;
-    flex-direction: column;
-
-    .category-name {
-      font-size: 20px;
-      margin-bottom: 23px;
-    }
-  }
-
-  .product-page {
+  .catalog-page {
     display: flex;
     flex-direction: row;
-
-    .about-product {
-      vertical-align: top;
-
-      p {
-        width: 500px;
-      }
-    }
-
-    .product-image {
-      margin-left:  139px;
-
-        img {
-          height: auto;
-          width: 511px;
-      }
-    }
   }
 
 
