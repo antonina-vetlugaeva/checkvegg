@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @ingridient.name %>
-</p>
+<section class ="ingridient-page">
+  <h1>
+    <%= @ingridient.name %>
+  </h1>
 
-<p>
-  <strong>Description:</strong>
-  <%= @ingridient.description %>
-</p>
+  <p>
+    <%= @ingridient.description %>
+  </p>
+</section>
 
 <%= link_to 'Edit', edit_ingridient_path(@ingridient) %> |
 <%= link_to 'Back', ingridients_path %>

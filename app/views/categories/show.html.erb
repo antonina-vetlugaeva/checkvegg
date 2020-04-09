@@ -24,12 +24,7 @@
     <% end %>
   </div>
 </section>
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
-
-<hr>
+<br>
 <%= link_to 'New Product', new_category_product_path(@category) %>
-<hr>
 
-<%= render @category.products %>
+<%#= render @category.products %>
