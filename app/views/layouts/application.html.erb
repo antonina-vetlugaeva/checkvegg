@@ -6,7 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'header', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
@@ -15,6 +15,12 @@
       <%= link_to 'Каталог', products_path %>
       <%= link_to 'Ингридиенты', ingridients_path %>
       <%= link_to 'О нас', about_page_path %>
+      <form class="search-form" role="search">
+        <div class="form-group">
+          <input type="text" placeholder="Search">
+        </div>
+        <button type="submit">Submit</button>
+      </form>
     </menu>
 
     <%= yield %>

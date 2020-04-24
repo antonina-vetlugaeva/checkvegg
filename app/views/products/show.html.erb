@@ -5,21 +5,23 @@
 
 <section class="product-page">
   <div class="about-product">
-    <h1>
+    <h2>
       <%= @product.name %>
-    </h1>
+    </h2>
 
     <p>
       <%= @product.type.name %>
     </p>
 
-    <p>
-      <% @product.ingridients.each do |ingridient| %>
-        <% product_items = @product.product_items.where(ingridient_id: ingridient.id) %>
+    <% unless @product.ingridients.empty? %>
+      <p>
+        <% @product.ingridients.each do |ingridient| %>
+          <% product_items = @product.product_items.where(ingridient_id: ingridient.id) %>
 
-        <%= count_products_by_ingridient(ingridient, @product) %>
-      <% end %>
-    </p>
+          <%= count_products_by_ingridient(ingridient, @product) %>
+        <% end %>
+      </p>
+    <% end %>
 
     <p>
       <strong>Состав:</strong>

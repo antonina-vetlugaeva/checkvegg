@@ -1,23 +1,25 @@
-<p id="notice"><%= notice %></p>
+<div class="content">
+  <p id="notice"><%= notice %></p>
 
-<h1>Каталог</h1>
+  <h2>Каталог</h2>
 
-<div class="catalog">
-    <div class="category-name">
-      <%= link_to 'Все продукты', products_path %>
-    </div>
-    <% @categories.each do |category| %>
+  <div class="catalog">
       <div class="category-name">
-        <a><%= link_to category.name, category %></a>
+        <%= link_to 'Все продукты', products_path %>
       </div>
-    <% end %>
+      <% @categories.each do |category| %>
+        <div class="category-name">
+          <a><%= link_to category.name, category %></a>
+        </div>
+      <% end %>
+  </div>
+
+
+
+
+  <%#= link_to 'New Category', new_category_path %>
+
+  <a><%#= link_to 'Show', category %></a>
+  <a><%#= link_to 'Edit', edit_category_path(category) %></a>
+  <a><%#= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></a>
 </div>
-
-
-
-
-<%#= link_to 'New Category', new_category_path %>
-
-<a><%#= link_to 'Show', category %></a>
-<a><%#= link_to 'Edit', edit_category_path(category) %></a>
-<a><%#= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></a>

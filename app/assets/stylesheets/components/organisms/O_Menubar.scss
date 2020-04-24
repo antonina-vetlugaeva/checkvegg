@@ -1,9 +1,15 @@
 .O_Menubar {
-  background: white;
-  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
   font-family: 'Rubik';
+  background: white;
   font-weight: bold;
-  padding: 35px 0 105px;
+  top: 0;
+  margin: 0;
+  z-index: 1000;
+  padding: 35px 150px;
+  position: fixed;
+  width: 100%;
 
   a {
     color: #02B1B3;
@@ -14,5 +20,10 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  .search-form {
+    display: flex;
+    padding-left: 55px;
   }
 }

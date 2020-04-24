@@ -1,0 +1,92 @@
+article {
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: 0;
+  font-size: 1.11vw;
+
+  .O_Menubar {
+    border-bottom: 1px solid black;
+  }
+
+  .welcome {
+    width: 1440px;
+    position: absolute;
+    background-image: url(background.png);
+    background-size:contain;
+    background-position: bottom;
+    border: 1px solid black;
+    margin-top: 100px;
+
+    img {
+      position: absolute;
+    }
+
+    img:first-of-type {
+      width: 14.6em;
+      height: 9.5em;
+      transform: rotate(-3deg);
+      margin-top: 31.75em;
+      margin-left: 68.125em;
+    }
+
+    img:nth-of-type(2) {
+      width: 9.37em;
+      height: 14.81em;
+      transform: rotate(33deg);
+      margin-top: 5.25em;
+      margin-left: 71.87em;
+    }
+
+    img:nth-of-type(3) {
+      width: 12.87em;
+      height: 16.18em;
+      transform: rotate(3.15deg);
+      margin-top: 19.12em;
+      margin-left: 51.2em;
+    }
+
+    img:nth-of-type(4) {
+      width: 17em;
+      height: 7em;
+      transform: rotate(-18deg);
+      margin-top: 4em;
+      margin-left: 4em;
+      z-index: 10;
+    }
+
+    .welcome-text {
+      position: relative;
+      border: 1px solid black;
+      background-color: white;
+      width: 28.6em;
+      margin: 6.7em 9.8em;
+      padding: 4.37em 4.65em;
+
+      h1 {
+        font-weight: bold;
+        font-size: 3em;
+      }
+
+      h3 {
+        padding-top: 2.18em;
+        font-weight: normal;
+      }
+
+      .A_Main-Button {
+        margin-top: 3.31em;
+      }
+    }
+  }
+
+  .about-app {
+    padding-left: 150px;
+    padding-top: 970px;
+    position: relative;
+
+    h3 {
+      width: 676px;
+    }
+  }
+}

@@ -1,24 +1,26 @@
-<p id="notice"><%= notice %></p>
-<section class="catalog-page">
-  <%= render "categories/catalog" %>
+<div class="content">
+  <p id="notice"><%= notice %></p>
+  <section class="catalog-page">
+    <%= render "categories/catalog" %>
 
-  <div class="product-list">
-    <% @products.each do |product| %>
-    <% id = product.category_id %>
-    <% category = Category.find_by id: id %>
+    <div class="product-list">
+      <% @products.each do |product| %>
+      <% id = product.category_id %>
+      <% category = Category.find_by id: id %>
 
 
-    <% id = product.type_id %>
-    <% type = Type.find_by id: id %>
+      <% id = product.type_id %>
+      <% type = Type.find_by id: id %>
 
-      <div class="product-card">
-        <div class="card-image"><%= image_tag product.image.url %></div>
-        <h3><%= link_to product.name, category_product_path(product.category, product) %></h3>
-      </div>
-    <% end %>
-  </div>
-</section>
+        <div class="product-card">
+          <div class="card-image"><%= image_tag product.image.url %></div>
+          <h3><%= link_to product.name, category_product_path(product.category, product) %></h3>
+        </div>
+      <% end %>
+    </div>
+  </section>
 
-<br>
+  <br>
 
-<%= link_to 'New Product', new_product_path %>
+  <%= link_to 'New Product', new_product_path %>
+<div class="content">
