@@ -27,7 +27,7 @@ article {
   }
 
   .welcome {
-    width: 1440px;
+    width: 100%;
     background-image: url(background.png);
     background-size: contain;
     background-position: bottom;
@@ -217,12 +217,12 @@ article {
   }
 
   .veg-friend {
-    width: 1440px;
+    width: 100%;
     height: auto;
     background-image: url(background.png);
     background-size: 84%;
-    background-position: top;
-    border-bottom: 1px solid black;
+    background-position: bottom;
+    border-bottom: 0.5px solid black;
 
 
     .library {
@@ -334,19 +334,44 @@ article {
 
     .brand-text {
       h2 {
-        margin-top: 8.75em;
-        width: 15em;
+        margin-top: 3.6em;
+        width: 11em;
       }
 
       h3 {
-        margin-top: 0.8em;
-        width: 15em;
+        margin-top: 1.25em;
+        width: 25em;
+      }
+
+      .A_Main-Button {
+        display: inline-block;
+        width: 200px;
+        background: #FFF;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 22px;
+        padding: 20px 15px;
+        margin-top: 4.375EM;
+
+        &:hover {
+          background: #000;
+
+          a {
+            color: #fff;
+          }
+        }
+
+        a {
+          color: #000;
+          font-size: 18px;
+          font-weight: bold;
+        }
       }
     }
 
     img {
       width: 39.9375em;
-      height: 46.125em;
+      height: auto;
     }
   }
 }
