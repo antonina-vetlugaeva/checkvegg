@@ -114,6 +114,7 @@ article {
 
   .veg-friend {
     width: 1440px;
+    height: auto;
     margin-top: 6.56em;
     background-image: url(background.png);
     background-size: 84%;
@@ -145,7 +146,7 @@ article {
       text-align: center;
       background: #B4E95D;
       width: 29.55em;
-      padding: 4.37em 0;
+      padding: 4.37em 0 5.2em 0;
       z-index: 111;
       margin-left: 51.5em;
       margin-top: -7.15em;
@@ -166,14 +167,14 @@ article {
       text-align: center;
       background: #98E3FF;
       width: 29.7em;
-      padding: 3.8em 0 7.1em 0;
-      margin-top: -6.3em;
-      margin-left: 16.4em;
+      padding: 3.8em 0 6.5em 0;
+      margin-top: -10.6em;
+      margin-left: 14.5em;
       border-radius: 0px 0px 250px 250px;
 
       h2 {
         color: white;
-        padding-bottom: 1.5em;
+        padding-bottom: 1em;
       }
 
       img {
@@ -182,5 +183,46 @@ article {
       }
     }
 
+    .ingridients-point {
+      position: relative;
+      text-align: center;
+      background: #FED454;
+      width: 31.2em;
+      padding: 4.37em 0;
+      z-index: 111;
+      margin-left: 51.5em;
+      margin-top: -10.7em;
+      border-radius: 250px 250px 0px 0px ;
+
+      h2 {
+        color: white;
+      }
+
+      img {
+        width: 12.56em;
+        height: 17.31em;
+        padding-bottom: 1.5em;
+      }
+    }
+
+    .eat-point {
+      display:inline-block;
+      position: relative;
+      text-align: center;
+      margin: -15em 0 7em 9em;
+      width: 25.2em;
+      background-color: #02B1B3;
+      padding: 4em 4.1em 3.5em;
+
+      h2 {
+        color: white;
+        padding-bottom: 1em;
+      }
+
+      img {
+        width: 25.12em;
+        height: 10.62em;
+      }
+    }
   }
 }
