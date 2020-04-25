@@ -25,5 +25,12 @@
   .search-form {
     display: flex;
     padding-left: 55px;
+
+
+    input[type=text] {
+      width: auto;
+      font-size: 14px;
+      padding: 3px;
+    }
   }
 }

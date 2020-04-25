@@ -381,6 +381,22 @@ article {
     background-size: 84%;
     background-position: top;
 
+    .bread {
+      width: 13.38em;
+      height: 19.53em;
+      position: absolute;
+      margin: 14em 0 0 10em;
+      transform: rotate(-30deg);
+    }
+
+    .chips {
+      width: 16.5em;
+      height: 18.5em;
+      position: absolute;
+      margin: 2em 0 0 28em;
+      transform: rotate(30deg);
+    }
+
     .interesting-text {
       display:inline-block;
       border: 1px solid black;
@@ -394,11 +410,57 @@ article {
         width: 20em;
       }
 
-      img {
+      .appstore {
         width: 9.96em;
         height: 3em;
         margin-top: 3em;
+        position: relative;
       }
+    }
+  }
+
+  .footer {
+    background-color: #02B1B3;
+    padding: 4.5em 0;
+    text-align: center;
+
+    h3 {
+      font-weight: bold;
+      color: white;
+      padding-bottom: 1.6em;
+    }
+
+    a, a:hover {
+    	text-decoration: none;
+    }
+
+    .socialbtns, .socialbtns ul, .socialbtns li {
+      margin: 0;
+      padding: 0 1em;
+    }
+
+    .socialbtns li {
+        list-style: none outside none;
+        display: inline-block;
+    }
+
+    .socialbtns .fa {
+    	width: 40px;
+      height: 28px;
+    	color: #000;
+    	background-color: #FFF;
+    	border: 1px solid #000;
+    	padding-top: 12px;
+    	border-radius: 22px;
+    	-moz-border-radius: 22px;
+    	-webkit-border-radius: 22px;
+    	-o-border-radius: 22px;
+    }
+
+    .socialbtns .fa:hover {
+    	color: #FFF;
+    	background-color: #000;
+    	border: 1px solid #000;
     }
   }
 }
