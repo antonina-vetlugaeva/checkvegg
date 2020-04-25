@@ -24,36 +24,50 @@
   <section class="functions">
     <h2>Вег(етари)анство, доступное каждому</h2>
     <h3>Мы заботимся о том, чтобы поиск  вегетарианских и веганских продуктов стал быстрым и удобным.</h3>
-    <!-- <div class="many-profits">
-      <div class="text-profits">
+    <div class="many-profits">
+      <div class="profit-list">
         <div class="profit">
-          <h3>Cостав продукта за пару секунд</h3>
-          <p>Просто отсканируйте штрихкод при помощи камеры смартфона, или введите название товара в поисковой строке.</p>
+          <%= image_tag 'bear1.png' %>
+          <div class ="profit-text">
+            <h3>Cостав продукта за пару секунд</h3>
+            <p>Просто отсканируйте штрихкод при помощи камеры смартфона, или введите название товара в поисковой строке.</p>
+          </div>
         </div>
         <div class="profit">
-          <h3>База ингридиентов под рукой</h3>
-          <p>Мы собрали для вас список самых распространенных неэтичных ингридиентов. Запоминайте и остерегайтесь. А еще – запросто находите альтернативу!</p>
+          <%= image_tag 'bear2.png' %>
+          <div class ="profit-text">
+            <h3>База ингридиентов под рукой</h3>
+            <p>Мы собрали для вас список самых распространенных неэтичных ингридиентов. Запоминайте и остерегайтесь. А еще – запросто находите альтернативу!</p>
+          </div>
         </div>
         <div class="profit">
-          <h3>Простая кастомизация</h3>
-          <p>Укажите тип своего питания со всеми и нюансами, и check veg будет радовать вас индивидуальными подсказками и подборками.</p>
+          <%= image_tag 'bear3.png' %>
+          <div class ="profit-text">
+            <h3>Простая кастомизация</h3>
+            <p>Укажите тип своего питания со всеми и нюансами, и check veg будет радовать вас индивидуальными подсказками и подборками.</p>
+          </div>
         </div>
         <div class="profit">
-          <h3>Платформа для обмена мнениями</h3>
-          <p>Check veg не был бы таким классным без активных и инициативных вас! Делитесь отзывами о продуктах, помогайте составлять топы товаров и общайтесь с единомышленниками.</p>
+          <%= image_tag 'bear4.png' %>
+          <div class ="profit-text">
+            <h3>Платформа для обмена мнениями</h3>
+            <p>Check veg не был бы таким классным без активных и инициативных вас! Делитесь отзывами о продуктах, помогайте составлять топы товаров и общайтесь с единомышленниками.</p>
+          </div>
         </div>
       </div>
       <div class="mockups">
-        <%#= image_tag 'картинка с мокапами.png' %>
-        <div class="slide-wrapper">
-          <div class="slide"></div>
-          <div class="slide"></div>
-          <div class="slide"></div>
-          <div class="slide"></div>
-          <div class="slide"></div>
+        <%= image_tag 'mockup.png' %>
+        <div id="slideshow">
+          <div class="slide-wrapper">
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+          </div>
         </div>
       </div>
-    </div> -->
+    </div>
   </section>
 
   <section class="veg-friend">
@@ -80,16 +94,16 @@
     </div>
   </section>
 
-  <!-- <section class="brands">
+  <section class="brands">
     <div class="brand-text">
       <h2>Специальные опции для брендов</h2>
       <h3>Свободно добавляйте в сервис принадлежащую вам этичную продукцию, чтобы знакомить с ней пользователей check veg!</h3>
       <div class = "A_Main-Button"><%= link_to 'Сотрудничать с нами'%></div>
     </div>
-    <%#= image_tag 'сотрудничество.png' %>
+    <%= image_tag 'brands.png' %>
   </section>
 
-  <section class="interesting">
+  <!-- <section class="interesting">
     <div class="interesting-text">
       <h2>Тут столько всего происходит!</h2>
       <h3>Check veg — сервис для проверки состава продуктов питания на этичность.</h3>

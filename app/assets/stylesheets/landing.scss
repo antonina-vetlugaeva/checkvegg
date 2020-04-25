@@ -42,32 +42,28 @@ article {
       width: 14.6em;
       height: 9.5em;
       transform: rotate(-3deg);
-      margin-top: 31.75em;
-      margin-left: 68.125em;
+      margin: 31.75em 0 0 68.125em;
     }
 
     img:nth-of-type(2) {
       width: 9.37em;
       height: 14.81em;
       transform: rotate(33deg);
-      margin-top: 5.25em;
-      margin-left: 71.87em;
+      margin: 5.25em 0 0 71.87em;
     }
 
     img:nth-of-type(3) {
       width: 12.87em;
       height: 16.18em;
       transform: rotate(3.15deg);
-      margin-top: 19.12em;
-      margin-left: 51.2em;
+      margin: 19.12em 0 0 51.2em;
     }
 
     img:nth-of-type(4) {
       width: 17em;
       height: 7em;
       transform: rotate(-18deg);
-      margin-top: 4em;
-      margin-left: 4em;
+      margin: 4em 0 0 4em;
       z-index: 10;
     }
 
@@ -96,19 +92,17 @@ article {
   }
 
   .about-app {
-    margin-left: 9.37em;
-    margin-top: 6.56em;
+    margin: 8.75em 0 8.75em 9.37em;
 
     h3 {
-      width: 37.5em;
+      width: 29em;
     }
 
     img {
       position: absolute;
       width: 27.44em;
       height: 20.69em;
-      margin-left: 700px;
-      margin-top: -157px;
+      margin: -9.81em 0 0 43.75em;
     }
   }
 
@@ -117,24 +111,123 @@ article {
     padding: 8.75em 9.37em;
 
     h2 {
-      margin-bottom: 2.19em;
-      width: 31.56em;
+      margin-bottom: 0.8em;
+      width: 15em;
+    }
+
+    h3 {
+      width: 20em;
+    }
+
+    .many-profits {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .profit-list {
+        margin-top: 4.37em;
+        width: 33em;
+        margin-right: 17em;
+
+        .profit {
+          display: flex;
+          flex-direction: row;
+
+          img {
+            width: 3.125em;
+            height: 3.56em;
+          }
+
+          .profit-text {
+            margin-left: 2.1875em;
+
+            h3 {
+              font-weight: bold;
+              margin-bottom: 0.8em;
+              color: #727272;
+            }
+          }
+        }
+
+        .profit:not(:last-of-type) {
+          margin-bottom: 3.31em;
+        }
+      }
+
+      .mockups {
+
+        #slideshow {
+          width: 16.62em;
+          height: 34em;
+          overflow: hidden;
+          margin-left: 1.2em;
+          border-radius: 10%;
+
+          .slide-wrapper {
+            -webkit-animation: slide 18s ease infinite;
+            width: 64.64em;
+
+            .slide {
+              float: left;
+              width: 16.62em;
+              height: 34em;
+            }
+
+            .slide:nth-child(1) {
+              background: #D93B65;
+            }
+
+            .slide:nth-child(2) {
+              background: #037E8C;
+            }
+
+            .slide:nth-child(3) {
+              background: #36BF66;
+            }
+
+            .slide:nth-child(4) {
+              background: #D9D055;
+            }
+
+            .slide:nth-child(5) {
+              background: #D0D055;
+            }
+
+            @-webkit-keyframes slide {
+              20% {margin-left: 0em;}
+              30% {margin-left: -16.62em;}
+              50% {margin-left: -16.62em;}
+              60% {margin-left: -33.24em;}
+              70% {margin-left: -33.24em;}
+              80% {margin-left: -66.48em;}
+              90% {margin-left: -66.48em;}
+            }
+          }
+        }
+
+        img {
+          position: absolute;
+          width: 19.125em;
+          height: 37.31em;
+          z-index: 2;
+          margin-top: -1.5em;
+        }
+      }
     }
   }
 
   .veg-friend {
     width: 1440px;
     height: auto;
-    margin-top: 8.75em;
     background-image: url(background.png);
     background-size: 84%;
     background-position: top;
+    border-bottom: 1px solid black;
 
 
     .library {
       display:inline-block;
-      margin-top: 8.75em;
-      margin-left: 9em;
+      margin: 8.75em 0 0 9em;
       width: 25.2em;
       height: 12.6em;
       background-color: white;
@@ -158,8 +251,7 @@ article {
       width: 29.55em;
       padding: 4.37em 0 5.2em 0;
       z-index: 111;
-      margin-left: 51.5em;
-      margin-top: -7.15em;
+      margin: -7.15em 0 0 51.5em;
 
       h2 {
         color: white;
@@ -178,8 +270,7 @@ article {
       background: #98E3FF;
       width: 29.7em;
       padding: 3.8em 0 6.5em 0;
-      margin-top: -8.8em;
-      margin-left: 14.5em;
+      margin: -8.8em 0 0 14.5em;
       border-radius: 0px 0px 250px 250px;
 
       h2 {
@@ -200,8 +291,7 @@ article {
       width: 31.2em;
       padding: 4.8em 0;
       z-index: 111;
-      margin-left: 49.7em;
-      margin-top: -10.7em;
+      margin: -10.7em 0 0 49.7em;
       border-radius: 250px 250px 0px 0px ;
 
       h2 {
@@ -233,6 +323,30 @@ article {
         width: 25.12em;
         height: 10.62em;
       }
+    }
+  }
+
+  .brands {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 9.37em;
+
+    .brand-text {
+      h2 {
+        margin-top: 8.75em;
+        width: 15em;
+      }
+
+      h3 {
+        margin-top: 0.8em;
+        width: 15em;
+      }
+    }
+
+    img {
+      width: 39.9375em;
+      height: 46.125em;
     }
   }
 }
