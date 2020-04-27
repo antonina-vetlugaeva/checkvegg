@@ -9,19 +9,23 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <menu class="O_Menubar" id="<%= 'O_landing-menu' if params[:controller] == 'static' %>">
-    <%= link_to 'Каталог', products_path %>
-    <%= link_to 'Ингридиенты', ingridients_path %>
-    <%= link_to 'О нас', about_page_path %>
-    <form class="search-form" role="search">
-      <div class="form-group">
-        <input type="text" placeholder="Введите название или штрихкод продукта">
-      </div>
-      <button type="submit"><%= image_tag 'search-icon.png' %></button>
-    </form>
-  </menu>
-
   <body class="<%= 'landing' if params[:controller] == 'static' %>">
+
+    <menu class="O_Menubar" id="<%= 'O_landing-menu' if params[:controller] == 'static' %>">
+      <%= link_to 'Каталог', products_path %>
+      <%= link_to 'Ингридиенты', ingridients_path %>
+      <%= link_to 'О нас', about_page_path %>
+      <form class="search-form" role="search">
+        <div class="form-group">
+          <input type="text" placeholder="Введите название или штрихкод продукта">
+        </div>
+        <button type="submit"><%= image_tag 'search-icon.png' %></button>
+      </form>
+    </menu>
+
+
     <%= yield %>
+
+    <%= javascript_pack_tag 'header' %>
   </body>
 </html>

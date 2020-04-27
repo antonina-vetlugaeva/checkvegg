@@ -28,8 +28,8 @@
 
     <%#= link_to 'About', categories_path, class: "A_Button" %>
 
-    <%= link_to 'Edit', edit_category_product_path(@product.category, @product) %>
-    <%= link_to 'Back', products_path %>
+    <%= link_to image_tag("icons/edit.png"), edit_category_product_path(@product.category, @product) %>
+    <%#= link_to 'Back', products_path %>
   </div>
 
   <div class="product-image"><%= image_tag @product.image.url %></div>
