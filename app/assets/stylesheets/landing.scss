@@ -133,7 +133,7 @@ article {
           display: flex;
           flex-direction: row;
 
-          img {
+          .bear {
             width: 3.125em;
             height: 3.56em;
           }
@@ -165,32 +165,31 @@ article {
 
           .slide-wrapper {
             -webkit-animation: slide 18s ease infinite;
-            width: 64.64em;
+            width: 66.48em;
 
             .slide {
               float: left;
               width: 16.62em;
               height: 34em;
+              background-size: 100%;
+              background-position: center;
+              background-repeat: no-repeat;
             }
 
             .slide:nth-child(1) {
-              background: #D93B65;
+              background-image: url(screen1.png);
             }
 
             .slide:nth-child(2) {
-              background: #037E8C;
+              background-image: url(screen2.png);
             }
 
             .slide:nth-child(3) {
-              background: #36BF66;
+              background-image: url(screen4.png);
             }
 
             .slide:nth-child(4) {
-              background: #D9D055;
-            }
-
-            .slide:nth-child(5) {
-              background: #D0D055;
+              background-image: url(screen3.png);
             }
 
             @-webkit-keyframes slide {
@@ -199,8 +198,8 @@ article {
               50% {margin-left: -16.62em;}
               60% {margin-left: -33.24em;}
               70% {margin-left: -33.24em;}
-              80% {margin-left: -66.48em;}
-              90% {margin-left: -66.48em;}
+              80% {margin-left: -49.86em;}
+              90% {margin-left: -49.86em;}
             }
           }
         }
@@ -330,7 +329,7 @@ article {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 9.37em;
+    margin: 0 0 8.75em 9.37em;
 
     .brand-text {
       h2 {
@@ -370,8 +369,9 @@ article {
     }
 
     img {
-      width: 39.9375em;
-      height: a;
+      width: 38em;
+      position: absolute;
+      margin: 6em 0 0 35em;
     }
   }
 

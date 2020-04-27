@@ -4,7 +4,7 @@
     <%= render "categories/catalog" %>
 
     <div class="product-list">
-      <% @products.each do |product| %>
+      <% @products.each(&:save) do |product| %>
       <% id = product.category_id %>
       <% category = Category.find_by id: id %>
 

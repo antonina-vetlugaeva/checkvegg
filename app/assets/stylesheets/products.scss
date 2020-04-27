@@ -33,7 +33,7 @@
 
     h3 {
       font-weight: normal;
-      padding-top: 35px;
+      margin-top: 25px;
     }
 
     img {
@@ -50,14 +50,29 @@
   .about-product {
     vertical-align: top;
 
+    h3 {
+      width: 346px;
+      text-align: center;
+      margin-top: 53px;
+    }
+
     p {
-      width: 500px;
-      padding-top: 53px;
+      margin-top: 35px;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    .vegan {
+      background-color: #98E3FF;
+      padding: 20px 35px;
+      border-radius: 11px;
     }
   }
 
   .product-image {
-    margin-left:  139px;
+    margin-left:  129px;
     position: relative;
 
     img {

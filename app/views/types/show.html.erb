@@ -1,9 +1,10 @@
 <p id="notice"><%= notice %></p>
+<div class="content">
+  <p>
+    <strong>Name:</strong>
+    <%= @type.name %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @type.name %>
-</p>
-
-<%= link_to 'Edit', edit_type_path(@type) %> |
-<%= link_to 'Back', types_path %>
+  <%= link_to 'Edit', edit_type_path(@type) %> |
+  <%= link_to 'Back', types_path %>
+</div>

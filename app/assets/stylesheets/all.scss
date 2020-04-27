@@ -9,7 +9,7 @@ body {
     line-height: 130%;
   }
 
-  .content {
+  .content, form:not(.search-form), .product-page {
     padding-top: 135px;
     margin: 0 150px;
   }
