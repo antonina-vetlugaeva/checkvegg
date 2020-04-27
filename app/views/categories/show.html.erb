@@ -17,10 +17,12 @@
     <% id = product.type_id %>
     <% type = Type.find_by id: id %>
 
-      <div class="product-card">
-        <div class="card-image"><%= image_tag product.image.url %></div>
-        <h3><%= link_to product.name, category_product_path(product.category, product) %></h3>
-      </div>
+      <% if type.name == '🍒Подходит веганам' %>
+        <div class="product-card">
+          <div class="card-image"><%= image_tag product.image.url %></div>
+          <h3><%= link_to product.name, category_product_path(product.category, product) %></h3>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </section>
