@@ -11,7 +11,7 @@
 
   <body class="<%= 'landing' if params[:controller] == 'static' %>">
 
-    <menu class="O_Menubar" id="<%= 'O_landing-menu' if params[:controller] == 'static' %>">
+    <menu class="O_Menubar">
       <%= link_to 'Каталог', products_path %>
       <%= link_to 'Ингридиенты', ingridients_path %>
       <%= link_to 'О нас', about_page_path %>
