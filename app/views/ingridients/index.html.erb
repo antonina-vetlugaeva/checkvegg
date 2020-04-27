@@ -1,19 +1,17 @@
-<div class="content">
-  <p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
-  <h2>Ингридиенты</h2>
+<h1>Ингридиенты</h1>
 
-  <section class="ingridient-list">
-    <% @ingridients.each(&:save) do |ingridient| %>
-      <div class="ingridient-card">
-        <h3><%= ingridient.name %></h3>
-        <p><%= ingridient.description %></p>
-        <a><%= link_to 'Подробнее', ingridient %></a>
-      </div>
-    <% end %>
-  </section>
+<section class="ingridient-list">
+  <% @ingridients.each do |ingridient| %>
+    <div class="ingridient-card">
+      <h3><%= ingridient.name %></h3>
+      <p><%= ingridient.description %></p>
+      <a><%= link_to 'Подробнее', ingridient %></a>
+    </div>
+  <% end %>
+</section>
 
-  <br>
+<br>
 
-  <%= link_to 'New Ingridient', new_ingridient_path %>
-<div class="content">
+<%= link_to 'New Ingridient', new_ingridient_path %>

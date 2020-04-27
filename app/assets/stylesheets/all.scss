@@ -1,54 +1,44 @@
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  max-width: 1440px;
+* {
+  font-family: 'Rubik', sans-serif;
+  line-height: 130%;
 
-  * {
-    font-family: 'Rubik', sans-serif;
-    font-style: normal;
-    line-height: 130%;
-  }
 
-  .content, form:not(.search-form), .product-page {
-    padding-top: 135px;
-    margin: 0 150px;
-  }
+  body {
+    overflow-x: hidden;
+    margin: 135px 150px 0;
 
-  a {
-    text-decoration: none;
-    color: #1A1919;
+    a {
+      text-decoration: none;
+      color: #1A1919;
 
-    &:hover {
-      color: #02B1B3;
+      &:hover {
+        color: #02B1B3;
+      }
+
     }
 
-  }
+    h1 {
+      color: #1A1919;
+      font-size: 28px;
+      font-weight: bold;
+      margin: 0;
+    }
 
-  h1 {
-    font-size: 48px;
-    line-height: 120%;
-  }
+    h3 {
+      font-size: 20px;
+      font-weight: normal;
+    }
 
-  h2 {
-    color: #1A1919;
-    font-size: 28px;
-    font-weight: bold;
-    margin: 0;
-  }
+    p {
+      font-size: 18px;
+      font-weight: normal;
+    }
 
-  h3 {
-    font-size: 20px;
-    line-height: 130%;
-  }
+    .catalog-page {
+      display: flex;
+      flex-direction: row;
+    }
 
-  p {
-    font-size: 18px;
-    line-height: 130%;
-  }
 
-  .catalog-page {
-    display: flex;
-    flex-direction: row;
   }
-
 }
