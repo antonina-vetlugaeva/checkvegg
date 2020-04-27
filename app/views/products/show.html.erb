@@ -9,9 +9,9 @@
       <%= @product.name %>
     </h1>
 
-    <p>
-      <%= @product.type.name %>
-    </p>
+    <h3 class="<%= 'vegan' if @product.type.name == '🍒Подходит веганам' %>">
+        <%= @product.type.name %>
+    </h3>
 
     <p>
       <% @product.ingridients.each do |ingridient| %>
