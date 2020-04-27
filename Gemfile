@@ -58,3 +58,5 @@ gem 'colorize'
 gem 'paperclip', '~> 4.2.0'
 
 gem 'jquery-rails'
+
+gem 'pg_search'

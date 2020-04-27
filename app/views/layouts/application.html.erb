@@ -15,12 +15,13 @@
       <%= link_to 'Каталог', products_path %>
       <%= link_to 'Ингридиенты', ingridients_path %>
       <%= link_to 'О нас', about_page_path %>
-      <form class="search-form" role="search">
-        <div class="form-group">
-          <input type="text" placeholder="Введите название или штрихкод продукта">
-        </div>
-        <button type="submit"><%= image_tag 'search-icon.png' %></button>
-      </form>
+
+
+      <%= form_tag products_path, :method => 'get' do %>
+        <%= text_field_tag :search, params[:search], :class => "input" %>
+        <%= submit_tag " ", :name => nil, :class => "search-button" %>
+      <% end %>
+
     </menu>
 
 

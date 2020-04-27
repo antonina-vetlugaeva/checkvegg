@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
     @categories = Category.all
+    @products = Product.search(params[:search])
   end
 
   # GET /products/1
