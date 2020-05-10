@@ -9,7 +9,7 @@
       <%= @product.name %>
     </h1>
 
-    <h3 class="<%= 'vegan' if @product.type.name == '🍒Подходит веганам' %>">
+    <h3 class=<%= style_color(@product.type.name)%>>
         <%= @product.type.name %>
     </h3>
 

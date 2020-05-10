@@ -9,4 +9,14 @@ module ProductsHelper
     ].join()
   end
 
+  def style_color(product_type)
+    case product_type
+    when '🍒Подходит веганам'
+      'vegan'
+    when '🍟Подходит вегетарианцам'
+      'vegetarian'
+    else
+      'non-vegetarian'
+    end
+  end
 end

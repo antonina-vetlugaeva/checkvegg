@@ -55,6 +55,18 @@
       margin-top: 53px;
     }
 
+    .vegan {
+      background-color: #98E3FF;
+    }
+
+    .vegetarian {
+      background-color: #B4E95D;
+    }
+
+    .non-vegetarian {
+      background-color: #FED454;
+    }
+
     p {
       margin-top: 35px;
     }
@@ -63,8 +75,7 @@
       font-weight: bold;
     }
 
-    .vegan {
-      background-color: #98E3FF;
+    h3 {
       padding: 20px 35px;
       border-radius: 11px;
     }
