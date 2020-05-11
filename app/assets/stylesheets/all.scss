@@ -1,51 +1,59 @@
 * {
   font-family: 'Rubik', sans-serif;
-  line-height: 130%;
-
-  .landing {
-    margin: 0;
-  }
 
   body {
     overflow-x: hidden;
-    margin: 135px 150px 0;
 
-    a {
-      text-decoration: none;
-      color: #1A1919;
+    .landing {
+      margin: 0;
 
-      &:hover {
-        color: #02B1B3;
+      .O_Menubar {
+        padding: 35px 150px;
+        box-shadow: none;
+      }
+    }
+
+    main {
+      margin: 200px 140px 0;
+
+      a {
+        text-decoration: none;
+        color: #1A1919;
+        line-height: 130%;
+
+        &:hover {
+          color: #02B1B3;
+        }
+
       }
 
+      .edit {
+        width: 22px;
+      }
+
+      h1 {
+        color: #1A1919;
+        font-size: 28px;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      h3 {
+        font-size: 20px;
+        font-weight: normal;
+        line-height: 130%;
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 130%;
+      }
+
+      .catalog-page {
+        display: flex;
+        flex-direction: row;
+      }
     }
-
-    .edit {
-      width: 22px;
-    }
-
-    h1 {
-      color: #1A1919;
-      font-size: 28px;
-      font-weight: bold;
-      margin: 0;
-    }
-
-    h3 {
-      font-size: 20px;
-      font-weight: normal;
-    }
-
-    p {
-      font-size: 18px;
-      font-weight: normal;
-    }
-
-    .catalog-page {
-      display: flex;
-      flex-direction: row;
-    }
-
-
   }
 }

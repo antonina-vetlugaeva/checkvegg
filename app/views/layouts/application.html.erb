@@ -9,7 +9,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="<%= 'landing' if params[:controller] == 'static' %>">
+  <body>
 
     <menu class="O_Menubar">
       <%= link_to 'Каталог', products_path %>
@@ -24,8 +24,9 @@
 
     </menu>
 
-
-    <%= yield %>
+    <main class="<%= 'landing' if params[:controller] == 'static' %>">
+      <%= yield %>
+    </main>
 
     <%= javascript_pack_tag 'header' %>
   </body>

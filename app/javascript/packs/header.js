@@ -5,7 +5,7 @@ window.onscroll = function() {
         $("menu").css({"border-bottom": "0.5px solid black"})
     }
     if(100 > scrolled){
-        $("menu").css({"border-bottom": "none"})
+        $("menu").css({"border-bottom": "none";})
     }
 
 }

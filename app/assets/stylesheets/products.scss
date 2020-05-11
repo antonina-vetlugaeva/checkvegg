@@ -24,7 +24,7 @@
 
   .product-card {
     width: 212px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     margin-right: 70px;
 
     &:nth-child(3n){
@@ -38,6 +38,7 @@
     img {
       width: 212px;
       height: 202px;
+      margin-bottom: 27px;
     }
   }
 }
@@ -68,7 +69,7 @@
     }
 
     p {
-      margin-top: 35px;
+      margin-top: 50px;
     }
 
     strong {
@@ -84,6 +85,7 @@
 
       img {
         width: 23px;
+        margin-top: 23px;
       }
     }
   }

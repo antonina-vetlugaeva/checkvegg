@@ -1,20 +1,23 @@
 .O_Menubar {
   display: flex;
   flex-flow: row wrap;
+  align-items: center;
   font-family: 'Rubik';
   background: white;
   font-weight: bold;
   top: 0;
   margin: 0;
   z-index: 1000;
-  padding: 35px 0;
+  padding: 35px 150px;
   position: fixed;
   width: 100%;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 
   a {
     color: #02B1B3;
     padding-right: 28px;
-    font-size: 16px;
+    font-size: 14px;
+    text-decoration: none;
 
 
     &:hover {
@@ -24,28 +27,28 @@
 
   form {
     display: flex;
-    padding-left: 55px;
-
+    padding-left: 7px;
+    align-items: center;
 
     .input {
       width: 307px;
       font-size: 14px;
       line-height: 18px;
-      padding-bottom: 5px;
+      padding-bottom: 3px;
       outline: 0;
       border: 1px solid transparent;
       border-bottom: 1px solid #575756;
-      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1)
     }
 
     .search-button {
       background-image: url(search-icon.png);
       background-size: contain;
+      background-repeat: no-repeat;
       padding: 0;
       border: none;
       margin-left: 23px;
-      width: 32px;
-      height: 26px;
+      width: 23px;
+      height: 23px;
     }
   }
 }
