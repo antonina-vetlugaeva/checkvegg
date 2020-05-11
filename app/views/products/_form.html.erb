@@ -17,6 +17,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :brand_id %>
+    <%= form.select :brand_id, Brand.all.collect { |b| [b.name, b.id] } %>
+  </div>
+
+  <div class="field">
     <%= form.label :category_id %>
     <%= form.select :category_id, Category.all.collect { |c| [c.name, c.id] } %>
   </div>
@@ -26,7 +31,9 @@
     <%= form.select :type_id, Type.all.collect { |t| [t.name, t.id] } %>
   </div>
 
-  <%= form.collection_check_boxes :ingridient_ids, Ingridient.all, :id, :name %>
+  <div class="field">
+    <%= form.collection_check_boxes :ingridient_ids, Ingridient.all, :id, :name %>
+  </div>
 
   <div class="field">
     <%= form.label :description %>

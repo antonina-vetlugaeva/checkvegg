@@ -3,9 +3,7 @@
 @product_items = nil
 @types = nil
 @users = nil
-@favourites = nil
 
-@users_names = ['Tonya', 'Masha', 'Liza']
 
 @categories_names = [
   {
@@ -24,6 +22,8 @@
 
 @ingridient_names = ['milk', 'cream', 'eggs', 'meat', 'fish']
 
+@brands_names = ['vkussvil', 'volko_molko', 'kukuika']
+
 
 def seed
   reset_db
@@ -33,6 +33,9 @@ def seed
 
   create_categories(@categories)
   @categories = Category.all
+
+  create_brands(@brands)
+  @brands = Brand.all
 
   create_categories_products
   @products = Product.all
@@ -69,7 +72,7 @@ def create_type(type)
 end
 
 def create_types_products
-#АААААА  
+
 end
 
 def create_ingridients(ingridients)
@@ -91,6 +94,11 @@ def create_product_ingridients(product)
   @ingridients.sample(product_ingridients_quantity).each do |ingridient|
     create_product_ingridient(product, ingridient)
   end
+end
+
+def create_product_ingridient(product, ingridient)
+  pi = IngridientsProducts.create!(product_id: product.id, ingridient_id: ingridient.id)
+  puts "Product ingridient just created with id#{pi.id} for product with id#{pi.product.id} for ingridient with id #{pi.ingridient.id}"
 end
 
 def create_categories(categories)
@@ -123,9 +131,24 @@ def create_category_product(category, product)
   puts "Product with name #{p.name} with type #{p.type.name} just created in category with name #{p.category.name}"
 end
 
-def create_product_ingridient(product, ingridient)
-  pi = IngridientsProducts.create!(product_id: product.id, ingridient_id: ingridient.id)
-  puts "Product ingridient just created with id#{pi.id} for product with id#{pi.product.id} for ingridient with id #{pi.ingridient.id}"
+def create_brands(brands)
+  @brands_names.each do |brand|
+    create_brand(brand)
+  end
+end
+
+def create_brand(brand)
+  b = Brand.create!(name: brand[:name])
+  puts "Brand with name #{b.name}"
+end
+
+def create_brands_products(brand, products)
+  products.each { |product| create_brand_product(brand, product) }
+end
+
+def create_brand_product(brand, product)
+  p = brand.products.create!(name: product)
+  puts "Product with name #{p.name} with type #{p.type.name} just created in brand with name #{p.brand.name}"
 end
 
 def create_products_items
@@ -149,35 +172,6 @@ def create_product_item(product, ingridient)
   puts "Product Item just created with id #{ product_item.id } for product with id #{ product_item.product.id } with ingridient with id #{ product_item.ingridient.id }"
 end
 
-def create_users
-  @users_names.each { |user_name| puts "User just created with id #{ User.create!(name: user_name).id }" }
-end
 
-def create_users_favourites
-  @users.each { |user| create_user_favourite(user) }
-end
-
-def create_user_favourite(user)
-  favourite = user.favourites.create!
-  puts "Favourite just created with id #{ favourite.id } for user with id #{ favourite.user.id }"
-end
-
-def fill_favourites_with_products
-  @favourites.each { |favourite| fill_favourite_with_products(favourite) }
-end
-
-def fill_favourite_with_products(favourite)
-  quantity = (1..20).to_a.sample
-  #взять из продукт айтемс столько продуктов, сколько сгенериться выше, и положить в избранные
-  product_items = @product_items.sample(quantity)
-
-  product_items.each { |product_item| create_favourite_item(favourite, product_item) }
-end
-
-def create_favourite_item(favourite, product_item)
-  product = product_item.product
-  favourite_item = FavouriteItem.create!(favourite_id: favourite.id, product_id: product.id, product_item_id: product_item.id )
-  puts "Favourite Item just created with id #{ favourite_item.id } for product with id #{ favourite_item.product.id } for product item with id #{ favourite_item.product_item.id }"
-end
 
 seed

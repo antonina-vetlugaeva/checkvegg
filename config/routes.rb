@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :brands
   get 'welcome/index'
   get 'static/about', :as => 'about_page'
   resources :favourite_items
@@ -14,8 +15,8 @@ Rails.application.routes.draw do
     resources :products
   end
 
-  resources :favourites do
-    resources :favourite_items
+  resources :brands do
+    resources :products
   end
 
   resources :products, only: [:index, :new, :create]

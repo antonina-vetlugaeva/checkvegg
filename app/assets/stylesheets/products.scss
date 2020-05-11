@@ -50,10 +50,16 @@
   .about-product {
     vertical-align: top;
 
+    h1 {
+      margin-bottom: 23px;
+    }
+
     h3 {
       width: 346px;
       text-align: center;
       margin-top: 53px;
+      padding: 20px 40px;
+      border-radius: 11px;
     }
 
     .vegan {
@@ -69,16 +75,11 @@
     }
 
     p {
-      margin-top: 50px;
+      margin-top: 53px;
     }
 
     strong {
       font-weight: bold;
-    }
-
-    h3 {
-      padding: 20px 35px;
-      border-radius: 11px;
     }
 
     a {

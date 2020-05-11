@@ -9,15 +9,22 @@
       <%= @product.name %>
     </h1>
 
+    <% if @product.brand %>
+      <a class="link-to-brand">
+        Производитель:
+        <%= link_to @product.brand.name, brand_path(@product.brand, @brand) %>
+      </a>
+    <% end %>
+
     <h3 class=<%= style_color(@product.type.name)%>>
         <%= @product.type.name %>
     </h3>
 
-    <p>
-      <% @product.ingridients.each do |ingridient| %>
-        <% product_items = @product.product_items.where(ingridient_id: ingridient.id) %>
 
-        <%= count_products_by_ingridient(ingridient, @product) %>
+    <p>
+      <strong>ПЖП:</strong>
+      <% @product.ingridients.each do |ingridient| %>
+        <%= ingridient.name %>
       <% end %>
     </p>
 
