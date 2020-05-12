@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 350px;
-  margin-right: 125px;
+  position: fixed;
 
 
   .category-name {
@@ -21,6 +21,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-left: 370px;
 
   .product-card {
     width: 212px;
@@ -80,6 +81,10 @@
 
     strong {
       font-weight: bold;
+    }
+
+    .no-ingridients {
+      color: #02B1B3;
     }
 
     a {

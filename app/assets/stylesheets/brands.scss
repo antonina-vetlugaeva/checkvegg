@@ -3,6 +3,10 @@
 }
 
 .brand-page {
-  width: 75%;
-  margin: auto;
+  margin-left: 0;
+
+  .product-list {
+    width: 67%;
+    margin: 0 16.5%;
+  }
 }
