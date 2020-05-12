@@ -19,4 +19,8 @@ module ProductsHelper
       'non-vegetarian'
     end
   end
+
+  def ingridient_name(product)
+    product.ingridients.map { |ingridient| ingridient.name }
+  end
 end

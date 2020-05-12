@@ -24,9 +24,7 @@
     <p>
       <strong>ПЖП:</strong>
       <% if @product.ingridients.count > 0 %>
-        <% @product.ingridients.each do |ingridient| %>
-          <%= ingridient.name %>
-        <% end %>
+        <%= ingridient_name(@product).join(', ') %>
       <% else %>
         <span class="no-ingridients">Отсутствуют ✓</span>
       <% end %>

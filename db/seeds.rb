@@ -1,9 +1,6 @@
 @ingridients = nil
 @products = nil
-@product_items = nil
 @types = nil
-@users = nil
-
 
 @categories_names = [
   {
@@ -44,8 +41,6 @@ def seed
   @ingridients = Ingridient.all
 
   create_products_ingridients
-  create_products_items
-  @product_items = ProductItem.all
 
   create_users
   @users = User.all
@@ -150,28 +145,6 @@ def create_brand_product(brand, product)
   p = brand.products.create!(name: product)
   puts "Product with name #{p.name} with type #{p.type.name} just created in brand with name #{p.brand.name}"
 end
-
-def create_products_items
-  @products.each { |product| create_product_items (product) }
-end
-
-def create_product_items (product)
-  #нужно пройтись по всем категориям  продукта, и для них создать айтемы
-  product.ingridients.each do |ingridient|
-    quantity = (2..10).to_a.sample
-    #берем случайное число
-    quantity.times { create_product_item(product, ingridient) }
-    #какое-то количество раз запускаем метод, для каждого ингридиента создаем айтемы от 2 до 10 штук
-  end
-
-end
-
-def create_product_item(product, ingridient)
-  serial_number = SecureRandom.uuid
-  product_item = product.product_items.create!(ingridient_id: ingridient.id, serial_number: serial_number)
-  puts "Product Item just created with id #{ product_item.id } for product with id #{ product_item.product.id } with ingridient with id #{ product_item.ingridient.id }"
-end
-
 
 
 seed
