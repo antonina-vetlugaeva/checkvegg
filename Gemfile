@@ -55,7 +55,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'colorize'
 
-gem 'paperclip', '~> 4.2.0'
+gem 'paperclip', '~> 5.2.0'
 
 gem 'jquery-rails'
 
