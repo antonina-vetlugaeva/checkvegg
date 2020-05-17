@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'welcome/index'
   get 'static/about', :as => 'about_page'
   resources :product_items

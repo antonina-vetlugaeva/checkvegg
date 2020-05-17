@@ -1,15 +1,55 @@
-.edit-product {
-  margin-bottom: 53px;
-}
+form {
+  padding-top: 16px;
 
-.field {
-  margin-top: 35px;
+  .field {
+    margin: 53px auto 0;
+    width: 50%;
 
-  p {
-    margin-bottom: 16px;
+    label {
+      font-size: 24px;
+
+
+    }
+
+    select, textarea, .enter-name {
+      margin-top: 16px;
+      width: 100%;
+      appearance: none;
+      -webkit-appearance: none;
+      border: 0;
+      -webkit-border-radius: 0px;
+      border-bottom: 2px solid black;
+      background-color: transparent;
+      text-overflow: '';
+      font-size: 20px;
+      color: #727272;
+      padding-bottom: 8px;
+    }
+
+
+    .label-checkbox {
+      font-size: 20px;
+      color: #727272;
+    }
+
+
+    input {
+      margin-top: 16px;
+    }
+
+    .select-arrow {
+      background-image: url(icons/arrow.png);
+      width: 23px;
+      height: 23px;
+      transform: rotate(90deg);
+      background-size: cover;
+      display: inline-block;
+      position: absolute;
+      margin: 20px 0 0 -25px;
+    }
   }
-}
 
-.actions {
-  margin-top: 53px;
+  .A_Button {
+    margin: 70px 0 105px 25%;
+  }
 }

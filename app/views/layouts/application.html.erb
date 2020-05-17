@@ -26,6 +26,8 @@
 
     <main class="<%= 'landing' if params[:controller] == 'static' %>">
       <%= yield %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
     </main>
 
     <%= javascript_pack_tag 'header' %>

@@ -12,42 +12,57 @@
   <% end %>
 
   <div class="field">
-    <p>Категория</p>
+    <%= form.label :category_id, 'Категория' %>
+    <br>
     <%= form.select :category_id, Category.all.collect { |c| [c.name, c.id] } %>
+    <div class="select-arrow"></div>
   </div>
 
   <div class="field">
-    <p>Название продукта</p>
-    <%= form.text_field :name %>
+    <%= form.label :name, 'Название продукта' %>
+    <br>
+    <%= form.text_field :name, class:"enter-name" %>
   </div>
 
   <div class="field">
-    <p>Производитель</p>
+    <%= form.label :brand_id, 'Производитель' %>
+    <br>
     <%= form.select :brand_id, Brand.all.collect { |b| [b.name, b.id] } %>
+    <div class="select-arrow"></div>
   </div>
 
   <div class="field">
-    <p>Тип продукта</p>
+    <%= form.label :type_id, 'Тип продукта' %>
+    <br>
     <%= form.select :type_id, Type.all.collect { |t| [t.name, t.id] } %>
+    <div class="select-arrow"></div>
   </div>
 
   <div class="field">
-    <p>ПЖП</p>
-    <%= form.collection_check_boxes :ingridient_ids, Ingridient.all, :id, :name %>
+    <%= form.label :ingridient_ids, 'ПЖП', class:"ingridient-form" %>
+    <br>
+    <%= form.collection_check_boxes(:ingridient_ids, Ingridient.all, :id, :name) do |b| %>
+        <%= b.label class:"label-checkbox" do%>
+          <%=b.check_box + b.text %>
+        <%end%>
+    <% end %>
+    <%#= form.collection_check_boxes :ingridient_ids, Ingridient.all, :id, :name %>
   </div>
 
   <div class="field">
-    <p>Состав</p>
+    <%= form.label :description, 'Состав' %>
+    <br>
     <%= form.text_area :description %>
   </div>
 
   <div class="field">
-    <p>Фотография</p>
+    <%= form.label :image, 'Фотография' %>
+    <br>
     <%= form.file_field :image %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Сохранить", class: "A_Button" %>
   </div>
 
 
