@@ -1,0 +1,56 @@
+.user-form {
+  .other-user-option {
+
+    a {
+      color: #727272;
+      text-decoration: underline;
+    }
+  }
+
+  #user_email, #user_password, #user_password_confirmation {
+    margin-top: 16px;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    -webkit-border-radius: 0px;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    text-overflow: '';
+    font-size: 20px;
+    color: #727272;
+    padding-bottom: 8px;
+  }
+
+  .login-button {
+    display: block;
+    margin: 70px auto 35px auto;
+  }
+
+  .register-button {
+    display: block;
+    margin: 70px auto 125px auto;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .rememberable {
+    margin-top: 20px;
+
+    .remember {
+      font-size: 20px;
+    }
+  }
+
+  .forgot-password {
+    display: flex;
+    justify-content: center;
+
+    a {
+      text-decoration: underline;
+      margin: 0 0 125px 0;
+    }
+  }
+}
