@@ -17,10 +17,20 @@
       <%= link_to 'О нас', about_page_path %>
 
 
-      <%= form_tag products_path, :method => 'get' do %>
+      <%= form_tag products_path, class:"search", :method => 'get' do %>
         <%= text_field_tag :search, params[:search], :class => "input" %>
         <%= submit_tag " ", :name => nil, :class => "search-button" %>
       <% end %>
+
+      <div class="user-info">
+        <% if user_signed_in? %>
+          <%= link_to "Личный кабинет", edit_user_registration_path %>
+        <% else %>
+          <div class="A_Small-button">
+            <%= link_to "Войти", new_user_session_path %>
+          </div>
+        <% end %>
+      </div> 
 
     </menu>
 

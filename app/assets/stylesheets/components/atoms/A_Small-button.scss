@@ -1,0 +1,25 @@
+.A_Small-button {
+  display: inline-block;
+  padding: 8px 0;
+  width: 96px;
+  background: #02B1B3;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+
+  &:hover {
+    background: #6ECACB;
+  }
+
+  a {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    &:hover {
+      color: white;
+    }
+  }
+}

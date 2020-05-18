@@ -25,9 +25,19 @@
     }
   }
 
-  form {
+  .A_Small-button {
+    margin-left: 400px;
+
+    a {
+      color: white;
+      text-align: center;
+      padding: 0;
+    }
+  }
+
+  .search {
     display: flex;
-    padding-left: 7px;
+    padding: 0 0 0 7px;
     align-items: center;
 
     .input {
