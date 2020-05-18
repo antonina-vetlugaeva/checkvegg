@@ -4,18 +4,18 @@
 
 @categories_names = [
   {
-    name: 'milk_cheese_sausages',
+    name: 'Молоко, сыр, колбасы',
     products: ['cheese','sausages']
   }, {
-    name: 'alcohol',
+    name: 'Напитки',
     products: ['beer', 'wine']
   }, {
-    name: 'sweets',
+    name: 'Бакалея',
     products: ['chocolate', 'icecream']
   }
 ]
 
-@type_names = ['vegan', 'vegetarian', 'nonvegetarian']
+@type_names = ['🍒 Подходит веганам', '🍟 Подходит вегетарианцам', '🐔 Не подходит вегетарианцам']
 
 @ingridient_names = ['milk', 'cream', 'eggs', 'meat', 'fish']
 
