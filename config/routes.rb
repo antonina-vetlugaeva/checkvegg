@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reviews
   root 'products#index'
   devise_for :users
   get 'welcome/index'
@@ -9,6 +10,10 @@ Rails.application.routes.draw do
   resources :categories
   resources :products
   resources :brands
+
+  resources :products do
+    resources :reviews, except: [:show, :index]
+  end
 
   resources :categories do
     resources :products

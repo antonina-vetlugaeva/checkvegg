@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_18_033248) do
+ActiveRecord::Schema.define(version: 2020_05_18_034451) do
 
   create_table "brands", force: :cascade do |t|
     t.integer "product_id"
@@ -60,6 +60,15 @@ ActiveRecord::Schema.define(version: 2020_05_18_033248) do
     t.integer "image_file_size"
     t.datetime "image_updated_at"
     t.integer "brand_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "rating"
+    t.text "comment"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.integer "product_id"
   end
 
   create_table "types", force: :cascade do |t|
