@@ -20,4 +20,8 @@ class Product < ApplicationRecord
       all
     end
   end
+
+  def average_rating
+    reviews.count == 0 ? 0 : reviews.average(:rating).round(2)
+  end
 end
