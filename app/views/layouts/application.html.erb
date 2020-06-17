@@ -27,7 +27,7 @@
 
       <div class="user-info">
         <% if user_signed_in? %>
-          <%= link_to "Личный кабинет", edit_user_registration_path %>
+          <%= link_to "Личный кабинет", edit_user_registration_path, :class => "personal" %>
         <% else %>
           <div class="A_Small-button">
             <%= link_to "Войти", new_user_session_path %>

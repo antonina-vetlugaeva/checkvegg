@@ -39,6 +39,23 @@
 
     <%= link_to image_tag("icons/edit.png"), edit_category_product_path(@product.category, @product) %>
     <%#= link_to 'Back', products_path %>
+
+    <%= link_to "Написать отзыв", new_product_review_path(@product) %>
+
+    <div class="reviews">
+      <% if @reviews.blank? %>
+        <h3>No reviews just yet, would you like to add the first!</h3>
+        <%= link_to "Write Review", new_product_review_path(@product), class: "btn btn-danger" %>
+      <% else %>
+        <% @reviews.each do |review| %>
+          <div class="reviews">
+            <p><%= current_user.email %></p>
+            <p><%= review.rating %></p>
+            <p><%= review.comment %></p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 
   <div class="product-image"><%= image_tag @product.image.url %></div>

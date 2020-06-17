@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reviews
   root 'products#index'
   devise_for :users
   get 'welcome/index'
@@ -16,6 +17,10 @@ Rails.application.routes.draw do
 
   resources :brands do
     resources :products
+  end
+
+  resources :products do
+    resources :reviews, except: [:show, :index]
   end
 
   resources :products, only: [:index, :new, :create, :update]

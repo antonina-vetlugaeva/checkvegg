@@ -4,6 +4,7 @@ class Product < ApplicationRecord
   belongs_to :type
   has_many :product_items
   has_many :favourite_items
+  has_many :reviews
 
   has_and_belongs_to_many :ingridients
 
