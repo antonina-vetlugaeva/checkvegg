@@ -1,5 +1,6 @@
 .reviews {
   margin-top: 140px;
+  padding-bottom: 105px;
 
   .adding-review {
     display: flex;
@@ -8,6 +9,24 @@
 
     .A_Button {
       margin-left: 825px;
+    }
+  }
+
+  .review-list {
+    padding-top: 53px;
+
+    .review {
+      padding-top: 35px;
+      width: 75%;
+
+      &:first-of-type {
+        padding-top: 0;
+      }
+
+      h3 {
+        padding-bottom: 16px;
+        font-weight: 600;
+      }
     }
   }
 
