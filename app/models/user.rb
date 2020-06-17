@@ -5,6 +5,4 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   validates :password, presence: true
   validates :email, presence: true
-
-  has_many :reviews, dependent: :destroy
 end

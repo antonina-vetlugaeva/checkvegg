@@ -8,7 +8,6 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("packs/header")
-require("packs/jquery.raty")
 require('jquery')
 require('jquery_ujs')
 

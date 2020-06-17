@@ -12,9 +12,12 @@
   <body>
 
     <menu class="O_Menubar">
-      <%= link_to 'Каталог', products_path %>
-      <%= link_to 'Ингридиенты', ingridients_path %>
-      <%= link_to 'О нас', about_page_path %>
+      <%= image_tag 'logo.png' %>
+      <nav>
+        <%= link_to 'Каталог', products_path %>
+        <%= link_to 'Ингридиенты', ingridients_path %>
+        <%= link_to 'О нас', about_page_path %>
+      </nav>
 
 
       <%= form_tag products_path, class:"search", :method => 'get' do %>
@@ -41,6 +44,5 @@
     </main>
 
     <%= javascript_pack_tag 'header' %>
-    <%= javascript_pack_tag 'jquery.raty' %>
   </body>
 </html>
