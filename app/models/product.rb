@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
-  belongs_to :category
+  belongs_to :category, :optional => true
   belongs_to :brand, :optional => true
-  belongs_to :type
+  belongs_to :type, :optional => true
   has_many :product_items
   has_many :favourite_items
   has_many :reviews
