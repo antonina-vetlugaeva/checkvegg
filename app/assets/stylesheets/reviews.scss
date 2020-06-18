@@ -7,21 +7,18 @@
     flex-direction: row;
     align-items: center;
 
-    .A_Button {
-      margin-left: 620px;
-    }
-
-    h2 {
-      display: inline-block;
-    }
-
-    #average_rating {
+    .star-rating {
+      width: 500px;
       display: inline-block;
       margin-left: 23px;
 
       img {
-        width: 34px;
+        width: 32px;
       }
+    }
+
+    .A_Button {
+      margin-left: 300px;
     }
   }
 
@@ -36,19 +33,19 @@
         padding-top: 0;
       }
 
-      h3 {
-        padding-bottom: 16px;
-        font-weight: 600;
-        display: inline-block;
-      }
-
       .star-rating {
         display: inline-block;
         margin-left: 16px;
 
         img {
-          width: 20px;
+          width: 23px;
         }
+      }
+
+      h3 {
+        padding-bottom: 16px;
+        font-weight: 600;
+        display: inline-block;
       }
     }
   }

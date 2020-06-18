@@ -49,14 +49,13 @@
 <section class="reviews">
   <div class="adding-review">
     <h2>Отзывы</h2>
-    <span id="average_rating"></span>
+    <div class="star-rating" data-score= <%= @avg_review %> ></div>
     <div class="A_Button"><%= link_to "Написать отзыв", new_product_review_path(@product) %></div>
   </div>
 
   <div class="review-list">
     <% if @reviews.blank? %>
-      <h3>No reviews just yet, would you like to add the first!</h3>
-      <%= link_to "Добавить отзыв", new_product_review_path(@product), class: "btn btn-danger" %>
+      <h3>У этого продукта пока нет отзывов. Ваш будет первым :)</h3>
     <% else %>
       <% @reviews.each do |review| %>
         <div class="review">
@@ -75,13 +74,8 @@
       path: '/assets/',
       readOnly: true,
       score: function() {
-            return $(this).attr('data-score');}
-    });
-
-    $('#average_rating').raty({
-      path: '/assets',
-      readOnly: true,
-      score: <%= @product.average_rating %>
+            return $(this).attr('data-score');
+    }
     });
   });
 </script>

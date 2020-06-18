@@ -3,23 +3,41 @@
   <%= render "categories/catalog" %>
 
   <div class="product-list">
-    <% @products.each do |product| %>
-    <% id = product.category_id %>
-    <% category = Category.find_by id: id %>
+      <% @products.each do |product| %>
+      <% id = product.category_id %>
+      <% category = Category.find_by id: id %>
 
 
-    <% id = product.type_id %>
-    <% type = Type.find_by id: id %>
+      <% id = product.type_id %>
+      <% type = Type.find_by id: id %>
 
       <div class="product-card">
         <div class="card-image"><%= image_tag product.image.url %></div>
         <p><%= link_to product.name, category_product_path(product.category, product) %></p>
       </div>
-
     <% end %>
   </div>
+
+
 </section>
 
 <br>
 
-<%#= link_to 'New Product', new_product_path %>
+<!-- <div class="tabs">
+
+   <div class="tab">
+       <input type="radio" id="tab-1" name="tab-group-1" checked>
+       <label for="tab-1">Tab One</label>
+       <div class="content">
+
+       </div>
+   </div>
+
+   <div class="tab">
+       <input type="radio" id="tab-2" name="tab-group-1">
+       <label for="tab-2">Tab Two</label>
+       <div class="content">
+       </div>
+   </div>
+
+</div> -->

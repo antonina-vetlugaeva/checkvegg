@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
-  belongs_to :category, :optional => true
+  belongs_to :category
   belongs_to :brand, :optional => true
-  belongs_to :type, :optional => true
+  belongs_to :type
   has_many :product_items
   has_many :favourite_items
   has_many :reviews
@@ -19,9 +19,5 @@ class Product < ApplicationRecord
     else
       all
     end
-  end
-
-  def average_rating
-    reviews.count == 0 ? 0 : reviews.average(:rating).round(2)
   end
 end
